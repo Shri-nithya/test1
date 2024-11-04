@@ -1,0 +1,24 @@
+  /* Custom CSS for underline effect */
+  .nav-link {
+    position: relative;
+    color: white; /* Change this if you need a different color */
+    text-decoration: none;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Adjust for stroke position */
+    height: 2px; /* Stroke thickness */
+    background: white; /* Color of the stroke */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.nav-link:hover{
+    color: black;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+   
+}
